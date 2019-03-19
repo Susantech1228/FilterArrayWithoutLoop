@@ -1,0 +1,16 @@
+var arr = [1,2,3,4,5,6];
+var oddArr = [];
+var result = findOddNum(arr);
+ 
+function findOddNum(arr) {
+   var num = arr.shift();
+   if (num % 2) { 
+     oddArr.push(num);
+   }
+   if (arr.length > 0) {
+          return findOddNum(arr);
+   }
+   else {
+     return oddArr; 
+   }
+}
